@@ -22,6 +22,8 @@
 		05D2CB932203816900B1419E /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2CB922203816900B1419E /* ServiceManager.swift */; };
 		05D2CB99220384AE00B1419E /* Ecobici.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05D2CB97220384AE00B1419E /* Ecobici.xcdatamodeld */; };
 		05D2CBA1220387EF00B1419E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05D2CBA0220387EE00B1419E /* GoogleService-Info.plist */; };
+		05D2CBA32204ACD400B1419E /* StationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2CBA22204ACD300B1419E /* StationsModel.swift */; };
+		05D2CBA52204ACFA00B1419E /* TimerToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2CBA42204ACFA00B1419E /* TimerToken.swift */; };
 		72455B7A1666CF918CFF351F /* Pods_EcoBici.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237B59E1B3C83E311C47AC6D /* Pods_EcoBici.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		05D2CB98220384AE00B1419E /* Ecobici.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ecobici.xcdatamodel; sourceTree = "<group>"; };
 		05D2CB9E2203862400B1419E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05D2CBA0220387EE00B1419E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		05D2CBA22204ACD300B1419E /* StationsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsModel.swift; sourceTree = "<group>"; };
+		05D2CBA42204ACFA00B1419E /* TimerToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerToken.swift; sourceTree = "<group>"; };
 		237B59E1B3C83E311C47AC6D /* Pods_EcoBici.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoBici.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A29B5C482F36B3EB338930A /* Pods-EcoBici.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoBici.release.xcconfig"; path = "Pods/Target Support Files/Pods-EcoBici/Pods-EcoBici.release.xcconfig"; sourceTree = "<group>"; };
 		98B3CE7402677E0CF96C7870 /* Pods-EcoBici.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoBici.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EcoBici/Pods-EcoBici.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 		05D2CB8A2203813200B1419E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				05D2CBA22204ACD300B1419E /* StationsModel.swift */,
 				05D2CB8B2203814100B1419E /* TokenModel.swift */,
 			);
 			path = Model;
@@ -130,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				05D2CB8D2203814F00B1419E /* Extensions.swift */,
+				05D2CBA42204ACFA00B1419E /* TimerToken.swift */,
 				05D2CB8E2203814F00B1419E /* GeneralFunctions.swift */,
 			);
 			path = Utils;
@@ -279,7 +285,9 @@
 				05D2CB6F22037E4300B1419E /* ViewController.swift in Sources */,
 				05D2CB83220380C600B1419E /* HomeView.swift in Sources */,
 				05D2CB8C2203814100B1419E /* TokenModel.swift in Sources */,
+				05D2CBA52204ACFA00B1419E /* TimerToken.swift in Sources */,
 				05D2CB8F2203814F00B1419E /* Extensions.swift in Sources */,
+				05D2CBA32204ACD400B1419E /* StationsModel.swift in Sources */,
 				05D2CB892203812E00B1419E /* HomeController.swift in Sources */,
 				05D2CB99220384AE00B1419E /* Ecobici.xcdatamodeld in Sources */,
 				05D2CB82220380C600B1419E /* MapView.swift in Sources */,

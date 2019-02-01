@@ -1,8 +1,8 @@
 //
-//  MapView.swift
+//  HomeView.swift
 //  Ecobici
 //
-//  Created by Pablo Ramirez on 1/30/19.
+//  Created by Pablo Ramirez on 1/31/19.
 //  Copyright © 2019 Pablo Ramirez. All rights reserved.
 //
 
@@ -10,16 +10,16 @@ import Foundation
 import UIKit
 
 protocol HomeDelegate{
-	func onButtonPressed(sender: UIButton)
+    func onButtonPressed(sender: UIButton)
 }
 
 public class HomeView: UIView{
     
-	var homeDelegate: HomeDelegate!
-	
+    var homeDelegate: HomeDelegate!
+    
     var referenceController: HomeController!
     var view: UIView!
-
+    
     let subview: UIView = UIView()
     let indicatorView: UIActivityIndicatorView = UIActivityIndicatorView()
     
@@ -30,10 +30,10 @@ public class HomeView: UIView{
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         
         let startButton: UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.width * 0.3, height: view.frame.height * 0.075))
-		startButton.center = CGPoint(x: view.frame.width * 0.5, y: view.frame.height * 0.75)
-		startButton.setTitle("Iniciar", for: .normal)
-		startButton.setTitleColor(UIColor.black, for: .normal)
-		startButton.addTarget(self, action: #selector(onButtonPressed(sender:)), for: .touchUpInside)
+        startButton.center = CGPoint(x: view.frame.width * 0.5, y: view.frame.height * 0.75)
+        startButton.setTitle("Iniciar", for: .normal)
+        startButton.setTitleColor(UIColor.black, for: .normal)
+        startButton.addTarget(self, action: #selector(onButtonPressed(sender:)), for: .touchUpInside)
         view.addSubview(startButton)
         
         //////////////////// Loader Interface
@@ -65,8 +65,20 @@ public class HomeView: UIView{
         subview.isHidden = true
         indicatorView.isHidden = true
     }
-	
-	@objc func onButtonPressed(sender: UIButton){
-		homeDelegate.onButtonPressed(sender: sender)
-	}
+    
+    func showAlertError(reference: HomeController, titleText: String, textMessage: String){
+        let alertController = UIAlertController(title: titleText, message: textMessage, preferredStyle: .alert)
+        let acceptAction = UIAlertAction(title: "Aceptar", style: .default) { (action: UIAlertAction) in
+            print("Accept Action");
+            
+            alertController.dismiss(animated: true, completion: nil)
+        }
+        
+        alertController.addAction(acceptAction)
+        reference.present(alertController, animated: true, completion: nil)
+    }
+    
+    @objc func onButtonPressed(sender: UIButton){
+        homeDelegate.onButtonPressed(sender: sender)
+    }
 }
